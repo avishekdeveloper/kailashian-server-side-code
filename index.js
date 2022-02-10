@@ -26,13 +26,13 @@ async function run() {
 
 
         // GETTING BIKES DATA
-        app.get('/bikes', async (req, res) => {
+        app.get('/basic', async (req, res) => {
             const cursor = basicCollection.find({});
             const basic = await cursor.toArray();
             res.send(basic);
         })
         // GETTING SINGLE bike DATA
-      
+
 
         ///////////////////////////////////////
     }
