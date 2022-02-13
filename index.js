@@ -30,6 +30,13 @@ async function run() {
             console.log(result);
             res.json(result);
         });
+        app.get('/users', async (req, res) => {
+            const user = req.body;
+            const cursor = usersCollection.find({});
+            const users = await cursor.toArray();
+            console.log(result);
+            res.send(users);
+        });
 
         app.get('/users/:email', async (req, res) => {
             const email = req.params.email;
